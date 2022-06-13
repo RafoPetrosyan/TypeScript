@@ -1,5 +1,5 @@
-import {UserActionType, UserState} from "../../types/users";
-import {UserAction} from "../../actions/users";
+import { UserActionType, UserState } from "../../types/users";
+import { UserAction } from "../../actions/users";
 
 const initialState: UserState = {
     users: [],
@@ -18,7 +18,20 @@ export const users = (state = initialState, action: UserAction): UserState => {
                 loading: true,
             }
         }
-
+        case UserActionType.FETCH_USER_SUCCESS: {
+            return {
+                ...state,
+                users: action.payload,
+                loading: false,
+            }
+        }
+        case UserActionType.FETCH_USER_ERROR: {
+            return {
+                ...state,
+                error: action.payload,
+                loading: false,
+            }
+        }
         default: {
             return state;
         }

@@ -5,7 +5,6 @@ export type ActionWithPayload<T, P> = {
 export type Action<T> = {
     type: T;
 }
-
 export function createAction<T extends string, P>(
     type: T, payload: P
 ): ActionWithPayload<T, P>;

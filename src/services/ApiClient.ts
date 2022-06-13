@@ -6,7 +6,7 @@ const client = axios.create({
 
 client.interceptors.request.use((config: any) => {
 
-    const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmJlZmI0NjE1NTZjMjU5MWJjNzViYSIsImlhdCI6MTY1Mjg5NDU1N30.2gojTEc806hodAhrLXuhDGtLwxze6WS72x8RX12tMXU';
+    const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmJlZmI0NjE1NTZjMjU5MWJjNzViYSIsImlhdCI6MTY1NDAwMjYxMn0.fK91baA38W2UzUUVa98KL1RDJ3QFjUDM2nT4brRMrCc';
     if (accessToken) {
         config.headers['x-authorization'] = accessToken
     }
